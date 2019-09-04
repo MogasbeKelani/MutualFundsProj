@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Assignment 3</title></head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(153, 255, 153);" alink="#000099" link="#000099" vlink="#990099">
+<h2>Assignment 3 - Processing Mutual Fund Data with a
+2-Dimensional Array</h2>
+<p>due October 15th</p>
+<p>The purpose of this assignment is the&nbsp;use of
+2-dimensional arrays, reading
+and
+writing text files, writing functions, performing calculations, and program planning and
+development.</p>
+<p>You will read an original input file and write it back out in a
+modified forrmat. &nbsp;You will then read the modifed file storing
+some of the data in a 2-dimensional array. &nbsp;The array will need to
+be sorted in different orders and processed.&nbsp;</p>
+<h3>Step-by-step Instructions</h3>
+<ol><li>Read in the original file, <a href="VTSMX.csv"><span style="font-weight: bold; font-style: italic;">VTSMX.csv</span></a>, partially
+shown below. Write that data out into a second file, <span style="font-weight: bold; font-style: italic;">VTSMXmodified.csv</span>,
+partially displayed below. &nbsp;The second file should have the
+headings removed and the commas 
+replaced by spaces. &nbsp;The original file&nbsp;contains 501 records
+and the modified file should contain 500 records.</li><li>Read in the
+modified file into a 2-dimensional int array with 500 rows and two
+columns. &nbsp;You should store the first column of data (the Date) and
+the fifth column of data (the Close) into the two columns of your
+array. &nbsp;Note, the floating point Close value should be converted
+to a <span style="font-style: italic;">rounded</span> int value. &nbsp;Sample array values are shown below. &nbsp;Note, the original data is sorted in ascending order by date.</li><li>Write a sort function that will allow you to sort the array data by either column in ascending or descending order.</li><li>Produce
+the report shown below, matching exactly the formats shown. &nbsp;You
+will need to sort the array a few times to produce the desired results.</li></ol><h4><b>Input File&nbsp;(VTSMX.csv) &nbsp;</b><span style="color: rgb(51, 102, 255);">[file updated 10/8/18]</span></h4>
+<span style="font-family: monospace;">
+</span>
+<table style="text-align: left; width: 692px; height: 188px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: white;"><span style="font-family: monospace;">Date,Open,High,Low,Close,Adj Close,Volume<br>2016-10-10,54.070000,54.070000,54.070000,54.070000,52.190102,0<br>2016-10-11,53.360001,53.360001,53.360001,53.360001,51.504784,0<br>2016-10-12,53.419998,53.419998,53.419998,53.419998,51.562695,0<br>2016-10-13,53.230000,53.230000,53.230000,53.230000,51.379307,0<br>2016-10-14,53.209999,53.209999,53.209999,53.209999,51.360001,0<br>2016-10-17,53.070000,53.070000,53.070000,53.070000,51.224869,0<br>2016-10-18,53.389999,53.389999,53.389999,53.389999,51.533741,0<br>2016-10-19,53.529999,53.529999,53.529999,53.529999,51.668877,0<br>2016-10-20,53.450001,53.450001,53.450001,53.450001,51.591660,0<br>...</span></td></tr></tbody></table><b><span style="font-weight: bold; color: rgb(204, 51, 204);"></span></b>
+<h4><b>Modified Input File (VTSMXmodified.csv)<span style="font-family: monospace;"></span></b></h4>
+<span style="font-family: monospace;"></span>
+<table style="text-align: left; width: 692px; height: 188px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(204, 204, 204);"><span style="font-family: monospace;">2016-10-10 54.070000 54.070000 54.070000 54.070000 52.190102 0<br>2016-10-11 53.360001 53.360001 53.360001 53.360001 51.504784 0<br>2016-10-12 53.419998 53.419998 53.419998 53.419998 51.562695 0<br>2016-10-13 53.230000 53.230000 53.230000 53.230000 51.379307 0<br>2016-10-14 53.209999 53.209999 53.209999 53.209999 51.360001 0<br>2016-10-17 53.070000 53.070000 53.070000 53.070000 51.224869 0<br>2016-10-18 53.389999 53.389999 53.389999 53.389999 51.533741 0<br>2016-10-19 53.529999 53.529999 53.529999 53.529999 51.668877 0<br>2016-10-20 53.450001 53.450001 53.450001 53.450001 51.591660 0<br></span><span style="font-family: monospace;">...</span></td>
+</tr>
+</tbody>
+</table><h4><span style="font-weight: bold;">Array Data</span><span style="font-weight: bold;"></span><span style="font-family: monospace;"></span></h4><table style="text-align: left; width: 243px; height: 188px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="background-color: rgb(255, 204, 204);"><span style="font-family: monospace;">20161010&nbsp;&nbsp; 5407<br>20161011&nbsp;&nbsp; 5336<br>20161012&nbsp;&nbsp; 5342<br>20161013&nbsp;&nbsp; 5323<br>20161014&nbsp;&nbsp; 5321<br>20161017&nbsp;&nbsp; 5307<br>20161018&nbsp;&nbsp; 5339<br>20161019&nbsp;&nbsp; 5353<br>20161020&nbsp;&nbsp; 5345<br>20161021&nbsp;&nbsp; 5344<br>...</span></td></tr></tbody></table><span style="font-family: monospace;"><br>
+</span><h4><span style="font-weight: bold;">Program Output </span><span style="font-family: monospace;"></span><span style="font-family: monospace;"></span></h4><span style="font-family: monospace;">
+
+</span>
+<table style="text-align: left; width: 540px; height: 204px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="background-color: rgb(255, 255, 204);"><span style="font-family: monospace;">Current Date: 10/03/18<br>Current Close: $72.93<br><br>The latest five closes are:<br>10/03/18&nbsp;&nbsp; $72.93<br>10/02/18&nbsp;&nbsp; $72.81<br>10/01/18&nbsp;&nbsp; $72.93<br>09/28/18&nbsp;&nbsp; $72.82<br>09/27/18&nbsp;&nbsp; $72.79<br><br>The oldest five closes are:<br>10/10/16&nbsp;&nbsp; $54.07<br>10/11/16&nbsp;&nbsp; $53.36<br>10/12/16&nbsp;&nbsp; $53.42<br>10/13/16&nbsp;&nbsp; $53.23<br>10/14/16&nbsp;&nbsp; $53.21<br><br>The five highest closes are:<br>09/20/18&nbsp;&nbsp; $73.61<br>09/21/18&nbsp;&nbsp; $73.55<br>09/24/18&nbsp;&nbsp; $73.28<br>08/29/18&nbsp;&nbsp; $73.27<br>09/25/18&nbsp;&nbsp; $73.23<br><br>Percent gain YTD: 9.34%<br><br>50 Day Moving Average: $72.18<br>200 Day Moving Average: $69.18<br>Percent gain over 200 Day Moving Average: 5.42%<br>Recommendation: Sell<br><br><br></span></td></tr></tbody></table><span style="font-family: monospace;"><br>
+</span>
+<h3><span style="font-weight: bold;"><b>Program</b></span><b>&nbsp;requirements</b></h3>
+<ol>
+<li>You
+must use a 2-dimensional array for all of the data.</li><li>Your output must match the sample output exactly.</li><li>Do
+not "hard-code" any of the output values. &nbsp;All dates and numbers
+must be retrieved from the array or calculated. &nbsp;<span style="font-weight: bold; font-style: italic;">Your program will
+be tested using a file with newer input data.</span></li>
+<li>Your solution must include at least 5 functions.
+&nbsp;And ...</li>
+<ul>
+<li>At least one function must include
+a&nbsp;two
+dimensional array argument.</li><li>At least one function must include an argument
+that
+consists of one row of a two dimensional array.</li>
+
+<li>At least one function must include an argument
+that
+consists of one element of a two dimensional array.</li>
+<li><span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(173, 216, 230);">Place
+the function definitions below main() and function prototypes above
+main().</span></li>
+</ul>
+<li>All files must be checked for a successful open.</li></ol><h4>Formulas and Calculations</h4><ol><li>The current date and current close represents the newest data that is stored.</li><li>The
+percent gain YTD (year to date) represents the gain since the last
+date of the previous year (2017). &nbsp;The&nbsp;gain (YTD) is
+calculated by subtracting the last close of the last year from the
+current close. &nbsp;The percent gain (YTD) is then calculated by
+dividing the gain (YTD) by the last close of the last year and
+expressing that result as a percent. &nbsp;Note, for this calculation,
+you will have to determine the&nbsp;the last close of the last year.</li><li>The 50 day moving average is calculated by taking the average of the last 50 close values.</li><li>The 200 day moving average is calculated by taking the average of the last 200 close values.</li><li>The
+Percent gain over the 200 day moving average is determined by first
+determining the gain over the 200 day moving average. &nbsp;That is the
+difference between the latest close and the 200 day moving average,
+&nbsp;To calculate the percent gain, divide the gain by the 200 day
+moving average and express that result as a percent.</li><li>The recommendation (Buy/Sell/Hold) is: &nbsp;</li></ol><div style="margin-left: 80px;">if the percent gain over the 200 day moving average is greater than 5%, you should <span style="font-style: italic;">sell</span><br>if the percent gain over the 200 day moving average is less than -5%, you should <span style="font-style: italic;">buy</span><br>otherwise, you should <span style="font-style: italic;">hold</span><br></div>
+ <ol>
+</ol>
+</body></html>
